@@ -1,0 +1,28 @@
+<?php
+
+namespace AchrafBardan\SimpleId\Tests;
+
+use AchrafBardan\SimpleId\SimpleIdRegistrar;
+use AchrafBardan\SimpleId\SimpleIdServiceProvider;
+
+class SimpleIdServiceProviderTest extends TestCase
+{
+
+    public function testRegisterModels()
+    {
+        $provider = new SimpleIdServiceProvider($this->app);
+
+        $provider->boot();
+
+        $this->assertEquals('App\Models\User', SimpleIdRegistrar::getModelForPrefix('users'));
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        config(['simple-id.models' => [
+            'users' => 'App\Models\User',
+        ]]);
+    }
+}
