@@ -4,12 +4,24 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "AchrafBardan\\SimpleId\\": "src/"
+      "AchrafBardan\\SimpleId\\": "src/",
+      "AchrafBardan\\SimpleId\\Tests\\": "tests/"
     }
   },
   "require": {
     "hashids/hashids": "^5.0@dev",
     "laravel/framework": "^10.0"
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "require-dev": {
+    "phpunit/phpunit": "10.5.x-dev",
+    "orchestra/testbench": "8.x-dev"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AchrafBardan\\SimpleId\\SimpleIdServiceProvider"
+      ]
+    }
+  }
 }
