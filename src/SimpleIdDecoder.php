@@ -27,7 +27,7 @@ final class SimpleIdDecoder
             [$prefix, $value] = $parts;
         }
 
-        $hashId = new Hashids('returnless');
+        $hashId = new Hashids(config('simple-id.salt'));
 
         $decoded = $hashId->decode($value);
         [$random, $timestamp] = $decoded;

@@ -10,7 +10,7 @@ final class SimpleIdEncoder
 {
     public static function encode(SimpleId $SimpleId): string
     {
-        $hashId = new Hashids('returnless');
+        $hashId = new Hashids(config('simple-id.salt'));
 
         $encoded = $hashId->encode(array_filter([
             $SimpleId->getRandom(),
