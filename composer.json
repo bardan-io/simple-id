@@ -1,0 +1,15 @@
+{
+  "name": "achrafbardan/simple-id",
+  "type": "libarry",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "AchrafBardan\\SimpleId\\": "src/"
+    }
+  },
+  "require": {
+    "hashids/hashids": "^5.0@dev",
+    "laravel/framework": "^10.0"
+  },
+  "minimum-stability": "dev"
+}
