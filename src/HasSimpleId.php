@@ -42,15 +42,9 @@ trait HasSimpleId
 
     public static function newUuid(?Model $model = null): string
     {
-        $model ??= new self();
-
-        $value = method_exists($model, 'getPrefixedValue')
-            ? $model->getPrefixedValue()
-            : null;
-
         return SimpleIdEncoder::encode(
             new SimpleId(
-                value: $value,
+                value: $model->getPrefixedValue(),
                 prefix: SimpleIdRegistrar::getPrefixForModel(static::class),
             ),
         );
@@ -78,5 +72,10 @@ trait HasSimpleId
     private static function setSimpleIdOnModel(Model $model): void
     {
         $model->{$model->getRouteKeyName()} = self::newUuid($model);
+    }
+
+    public function getPrefixedValue(): int
+    {
+        return $this->getKey();
     }
 }
