@@ -1,7 +1,6 @@
 {
   "name": "achrafbardan/simple-id",
   "type": "libarry",
-  "version": "2.0.0",
   "license": "MIT",
   "autoload": {
     "psr-4": {
