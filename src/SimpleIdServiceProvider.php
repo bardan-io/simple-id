@@ -1,6 +1,6 @@
 <?php
 
-namespace AchrafBardan\SimpleId;
+namespace BardanIO\SimpleId;
 
 use Illuminate\Support\ServiceProvider;
 

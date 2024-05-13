@@ -1,10 +1,10 @@
 <?php
 
-namespace AchrafBardan\SimpleId\Tests;
+namespace BardanIO\SimpleId\Tests;
 
-use AchrafBardan\SimpleId\SimpleId;
-use AchrafBardan\SimpleId\SimpleIdDecoder;
-use AchrafBardan\SimpleId\SimpleIdEncoder;
+use BardanIO\SimpleId\SimpleId;
+use BardanIO\SimpleId\SimpleIdDecoder;
+use BardanIO\SimpleId\SimpleIdEncoder;
 
 class SimpleIdDecoderTest extends TestCase
 {

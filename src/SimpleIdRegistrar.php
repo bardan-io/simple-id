@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AchrafBardan\SimpleId;
+namespace BardanIO\SimpleId;
 
 final class SimpleIdRegistrar
 {

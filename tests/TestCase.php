@@ -1,9 +1,9 @@
 <?php
 
-namespace AchrafBardan\SimpleId\Tests;
+namespace BardanIO\SimpleId\Tests;
 
-use AchrafBardan\SimpleId\SimpleIdServiceProvider;
-use AchrafBardan\SimpleId\Tests\Support\User;
+use BardanIO\SimpleId\SimpleIdServiceProvider;
+use BardanIO\SimpleId\Tests\Support\User;
 use Illuminate\Support\Facades\Schema;
 
 class TestCase extends \Orchestra\Testbench\TestCase

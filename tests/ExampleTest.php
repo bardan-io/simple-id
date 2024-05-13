@@ -1,6 +1,6 @@
 <?php
 
-namespace AchrafBardan\SimpleId\Tests;
+namespace BardanIO\SimpleId\Tests;
 
 class ExampleTest extends TestCase
 {

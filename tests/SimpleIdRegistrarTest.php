@@ -1,8 +1,8 @@
 <?php
 
-namespace AchrafBardan\SimpleId\Tests;
+namespace BardanIO\SimpleId\Tests;
 
-use AchrafBardan\SimpleId\SimpleIdRegistrar;
+use BardanIO\SimpleId\SimpleIdRegistrar;
 use PHPUnit\Framework\TestCase;
 
 class SimpleIdRegistrarTest extends TestCase

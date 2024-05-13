@@ -1,9 +1,9 @@
 <?php
 
-namespace AchrafBardan\SimpleId\Tests;
+namespace BardanIO\SimpleId\Tests;
 
-use AchrafBardan\SimpleId\SimpleIdDecoder;
-use AchrafBardan\SimpleId\Tests\Support\User;
+use BardanIO\SimpleId\SimpleIdDecoder;
+use BardanIO\SimpleId\Tests\Support\User;
 
 class HasSimpleIdTest extends TestCase
 {

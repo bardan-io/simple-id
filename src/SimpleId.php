@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AchrafBardan\SimpleId;
+namespace BardanIO\SimpleId;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Database\Eloquent\Builder;

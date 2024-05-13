@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace AchrafBardan\SimpleId;
+namespace BardanIO\SimpleId;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;

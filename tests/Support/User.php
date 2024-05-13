@@ -1,8 +1,8 @@
 <?php
 
-namespace AchrafBardan\SimpleId\Tests\Support;
+namespace BardanIO\SimpleId\Tests\Support;
 
-use AchrafBardan\SimpleId\HasSimpleId;
+use BardanIO\SimpleId\HasSimpleId;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model

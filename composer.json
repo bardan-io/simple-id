@@ -1,12 +1,12 @@
 {
-  "name": "achrafbardan/simple-id",
+  "name": "bardan-io/simple-id",
   "description": "A simple and easy to use package to generate unique ids for your Eloquent models.",
   "type": "libarry",
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "AchrafBardan\\SimpleId\\": "src/",
-      "AchrafBardan\\SimpleId\\Tests\\": "tests/"
+      "BardanIO\\SimpleId\\": "src/",
+      "BardanIO\\SimpleId\\Tests\\": "tests/"
     }
   },
   "require": {
@@ -21,7 +21,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "AchrafBardan\\SimpleId\\SimpleIdServiceProvider"
+        "BardanIO\\SimpleId\\SimpleIdServiceProvider"
       ]
     }
   }
