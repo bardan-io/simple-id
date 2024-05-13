@@ -13,19 +13,27 @@ use Throwable;
  */
 trait HasSimpleId
 {
+    protected const UUID_COLUMN = 'uuid';
+
     public static function findUuid(?string $uuid): ?self
     {
-        return self::where('uuid', $uuid)->first();
+        return self::where(self::UUID_COLUMN, $uuid)->first();
     }
 
     public static function findUuidOrFail(?string $uuid): ?self
     {
-        return self::where('uuid', $uuid)->firstOrFail();
+        return self::where(self::UUID_COLUMN, $uuid)->firstOrFail();
+    }
+
+
+    public function getRouteKey()
+    {
+        return $this->getAttribute($this->getRouteKeyName());
     }
 
     public function getRouteKeyName(): string
     {
-        return 'uuid';
+        return self::UUID_COLUMN;
     }
 
     public function getApiRouteKeyType(): string
@@ -36,7 +44,7 @@ trait HasSimpleId
     public function decodedUuid(): Attribute
     {
         return new Attribute(
-            get: fn ($value) => SimpleIdDecoder::decode($value),
+            get: fn () => SimpleIdDecoder::decode($this->getAttribute(self::UUID_COLUMN)),
         );
     }
 
@@ -51,7 +59,7 @@ trait HasSimpleId
         return SimpleIdEncoder::encode(
             new SimpleId(
                 value: $value,
-                prefix: SimpleIdRegistrar::getPrefixForModel(static::class),
+                prefix: (new self)->getPrefixForModel(),
             ),
         );
     }
@@ -78,5 +86,10 @@ trait HasSimpleId
     private static function setSimpleIdOnModel(Model $model): void
     {
         $model->{$model->getRouteKeyName()} = self::newUuid($model);
+    }
+
+    public function getPrefixForModel(): ?string
+    {
+        return SimpleIdRegistrar::getPrefixForModel(static::class);
     }
 }
