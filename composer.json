@@ -1,5 +1,6 @@
 {
   "name": "achrafbardan/simple-id",
+  "description": "A simple and easy to use package to generate unique ids for your Eloquent models.",
   "type": "libarry",
   "license": "MIT",
   "autoload": {
